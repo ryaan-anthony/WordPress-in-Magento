@@ -18,11 +18,11 @@
 	</frontend>
  
     <global> 
-		<helpers>
-			<wordpress>
-				<class>Ip_WordPress_Helper</class>
-			</wordpress>
-		</helpers> 			
+	<helpers>
+		<wordpress>
+			<class>Ip_WordPress_Helper</class>
+		</wordpress>
+	</helpers> 			
         <blocks>
             <wordpress>
                 <class>Ip_WordPress_Block</class>
