@@ -1,0 +1,20 @@
+<?php
+/**
+ * @see Ip_WordPress_Block_Widget
+ */
+?>
+<?php $first = 0;?>
+
+<?php $posts = $this->getPosts();?>
+
+<?php foreach($posts as $post): ?>
+
+	<div class="news-item clearfix<?php echo !$first++ ? ' first': '';?>">
+    	<?php $permalink = $this->helper('wordpress')->getPermalink($post);?>
+		<a href="<?php echo $permalink;?>"><?php echo $this->helper('wordpress')->getImage($post->ID,array(141,132),'news-thumb'); ?></a>
+		<h5><a href="<?php echo $permalink;?>"><?php echo $post->post_title;?></a></h5>
+		<p><?php echo $post->post_excerpt;?></p>
+		<p class="more">[ <a href="<?php echo $permalink;?>">read more</a> ]</p>
+	</div>
+    
+<?php endforeach;?>

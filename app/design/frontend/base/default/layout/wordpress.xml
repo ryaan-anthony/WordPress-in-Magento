@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+
+	<_post_index>
+		<reference name="head">
+			<action method="addCss"><stylesheet>css/wordpress.css</stylesheet></action>
+		</reference>
+        <reference name="left">
+			<block type="wordpress/sidebar" name="wordpress.sidebar" as="news"/>
+        </reference>	
+	</_post_index>
+
+	<_archive_index>
+		<reference name="head">
+			<action method="addCss"><stylesheet>css/wordpress.css</stylesheet></action>
+		</reference>
+        <reference name="left">
+			<block type="wordpress/sidebar" name="wordpress.sidebar" as="news"/>
+        </reference>	
+	</_archive_index>
+
+    <cms_index_index>
+        <reference name="default_home_page">
+			<block type="wordpress/widget" name="wordpress.events" as="news"/>
+        </reference>
+    </cms_index_index>
+
+</layout>

@@ -1,0 +1,22 @@
+<?php
+/**
+ * @see Ip_WordPress_Block_Sidebar
+ */
+?>
+<div class="block block-category-nav category">
+    <div class="block-title">
+    	<strong>
+        	<span>Most Recent Posts</span>
+		</strong>
+    </div>
+    <div class="block-content">
+		<ul id="wordpress-nav">
+			<?php foreach($this->getPosts() as $post):?>
+            	<li>
+                	<a href="<?php echo $this->helper('wordpress')->getPermalink($post); ?>"><?php echo $post->post_title;?></a> <br>
+					<span><?php echo $this->helper('wordpress')->getDate($post);?></span>
+				</li>
+            <?php endforeach;?>
+		</ul>
+    </div>
+</div>

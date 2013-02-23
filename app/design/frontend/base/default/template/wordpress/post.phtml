@@ -1,0 +1,9 @@
+<?php
+/**
+ * @see Ip_WordPress_Block_Post
+ */
+?>
+<?php $post = $this->getPost();?>
+<?php echo $this->helper('wordpress')->getImage($post->ID,array(350,350),'alignleft'); ?>
+<h1><?php echo $post->post_title;?></h1>
+<?php echo apply_filters('the_content',$post->post_content);?>
