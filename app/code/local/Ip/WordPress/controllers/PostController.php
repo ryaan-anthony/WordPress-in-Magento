@@ -8,7 +8,7 @@ class Ip_WordPress_PostController extends Mage_Core_Controller_Front_Action
         $this->loadLayout();          
  
         $block = $this->getLayout()->createBlock(
-            'Ip_WordPress_Block_Single',
+            'Ip_WordPress_Block_Post',
             'wordpress'
         );
  		
