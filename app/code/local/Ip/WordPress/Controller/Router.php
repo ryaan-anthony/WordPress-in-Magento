@@ -1,6 +1,8 @@
 <?php
 
-require_once "Mage/Core/Controller/Varien/Router/Standard.php";
+if(!class_exists('Mage_Core_Controller_Varien_Router_Standard', false)){
+	require_once 'Mage/Core/Controller/Varien/Router/Standard.php';
+}
 
 class Ip_WordPress_Controller_Router extends Mage_Core_Controller_Varien_Router_Standard
 {
