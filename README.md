@@ -1,4 +1,4 @@
-##Requires WordPress installed
+##1. Requires WordPress installed
 
 Add this to top of /index.php
 
@@ -8,7 +8,7 @@ Add this to top of /index.php
     }
 
 
-##Prevent Autoloading WordPress files
+##2. Prevent Autoloading WordPress files
 
 Add to /lib/Varien/Autoload.php line 93:
 
@@ -16,7 +16,7 @@ Add to /lib/Varien/Autoload.php line 93:
         return null;
     }
 
-##Duplicate "__()" function 
+##3. Duplicate "__()" function 
 
 Remove depreciated function from /app/code/core/Mage/Core/functions.php on line 96
 
